@@ -1,0 +1,36 @@
+
+//Constructor overloading
+
+//parent class 
+
+package javalearn.com;
+
+public class ParentClass {
+	
+	public ParentClass() {
+		System.out.println("parent class constructor");
+		
+	}
+	
+
+}
+
+//Child class 
+
+package javalearn.com;
+
+public class Childclass extends ParentClass {
+		
+		//constructor over loading
+
+	public Childclass() {
+		//super();
+		System.out.println("child class");
+	}
+	public static void main(String[] args) {
+		Childclass childclass= new Childclass();
+		
+		
+	}
+}
+
