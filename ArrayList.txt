@@ -1,0 +1,121 @@
+package CollectionExample2;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class CollectionLinkedArrayeg {
+	
+	private static final char[] string = null;
+
+	public static void main(String[] args) {
+		
+	List <String> arrayList = new ArrayList<String>();
+	
+	arrayList.add("BenZ");
+	arrayList.add("BMW");
+	arrayList.add("Nissan");
+	arrayList.add("Ferrai");
+	arrayList.add("GTR");
+	arrayList.add("BMW");
+	System.out.println(arrayList);
+
+	//Retrieve element
+	System.out.println(arrayList.get(1));
+	
+	//To find index poistion of element
+	System.out.println(arrayList.indexOf("Nissan"));
+	
+	//To find the last index of element
+	System.out.println(arrayList.lastIndexOf("BMW"));
+	System.out.println(arrayList.lastIndexOf("Mercedes"));
+	
+	//Copy the List of string values
+	
+	List<String> anotherList = new ArrayList<String>();
+	anotherList.addAll(arrayList);
+	System.out.println(anotherList);
+	
+	//clear copy values
+	
+	anotherList.clear();
+	System.out.println(anotherList);
+	
+	
+	//to remove specfic values
+	
+	arrayList.remove(0);
+	System.out.println(arrayList);
+	
+	arrayList.remove("Nissan");
+	System.out.println(arrayList);
+	
+	//to add Null
+	arrayList.add(null);
+	System.out.println(arrayList);
+	
+	//update the Index element value
+	arrayList.set(0, "Chevrolt");
+	System.out.println(arrayList);
+	
+	
+	//to arraylist empty or not
+	
+	System.out.println(arrayList.isEmpty());
+	
+
+System.out.println("--------------------------");
+
+	
+	//Iterate
+	
+	//using for each
+for (String string : arrayList) {
+	
+	System.out.println(string);
+	
+}
+
+System.out.println("--------------------------");
+
+
+//using for loop
+
+for(int i = 0;i<arrayList.size();i++){
+	System.out.println(arrayList.get(i));
+	}
+
+System.out.println("--------------------------");
+
+
+//using Iterator
+//List Iterator
+
+ListIterator<String> iterator = arrayList.listIterator();
+
+while(iterator.hasNext()){
+	
+	System.out.println(iterator.next());
+	
+}
+
+//transverseable
+while(iterator.hasPrevious()) {
+	System.out.println(iterator.previous());
+	
+}
+System.out.println("--------------------------");
+
+//forward direction
+Iterator<String> iterable=arrayList.iterator();
+
+while(iterable.hasNext()) {
+	System.out.println(iterable.next());
+}
+
+//multi-thread
+//arrayList.add("tata");
+
+}
+}
